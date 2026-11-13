@@ -32,6 +32,13 @@ dsh plugin --profile <你的profile> add github:1050911587/dsh-atri-tts
 
 装完重启 DSH，左侧「工作区」上方即可看到「亚托莉语音」入口。
 
+## 与 dsh-world QQ 通道集成
+
+让世界里的「她」也能用这副嗓子发 QQ 语音条：`qq_voice` 工具 → 本地 9880 合成 → `record` 段 → SnowLuma 自动转 SILK → QQ 落地。
+完整文件与逐处补丁见 **[integrations/dsh-world/README.md](integrations/dsh-world/README.md)**（含服务脚本 `api_atri.py` 与中文读音校准表）。
+
+要点：语音服务是否可用**完全由本插件的开关决定**，不自动拉起；默认中文、语速 1.0；中文读音按《新华字典》校准，校准在服务端一处生效，面板/QQ/CLI 共享。
+
 ## 环境要求
 
 - Windows x64
