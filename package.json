@@ -1,0 +1,41 @@
+{
+  "name": "dsh-atri-tts",
+  "version": "0.1.0",
+  "description": "亚托莉本地语音（GPT-SoVITS v2Pro）——左侧工作区上方开关：开=启动本地 Python 服务，关=停止。默认关闭。QQ 世界通道可发亚托莉音色语音条。",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22",
+    "dsh": ">=0.2.1-rc.2"
+  },
+  "keywords": ["dsh", "dsh-plugin", "deepseek-harness", "tts", "gpt-sovits", "atri"],
+  "author": "1050911587",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/1050911587/dsh-atri-tts.git"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": ["slots"],
+      "external": ["react"]
+    }
+  }
+}
